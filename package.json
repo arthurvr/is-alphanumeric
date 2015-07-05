@@ -1,6 +1,6 @@
 {
   "name": "is-alphanumeric",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Check if a string only contains alphanumeric characters",
   "license": "MIT",
   "repository": "arthurvr/is-alphanumeric",
