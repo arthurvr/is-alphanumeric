@@ -1,21 +1,20 @@
-'use strict';
-var test = require('ava');
-var isAlphanumeric = require('./');
+import test from 'ava';
+import isAlphanumeric from './';
 
-test('should check if a string only contains alphanumeric characters', function (t) {
-	['abc', 'éçèà', 'ab114554', '123', 'a', 'ABC'].forEach(function (val) {
+test('should check if a string only contains alphanumeric characters', t => {
+	['abc', 'éçèà', 'ab114554', '123', 'a', 'ABC'].forEach(val => {
 		t.is(isAlphanumeric(val), true);
 	});
 
-	['a b', '{', '}', '_', '-', '$', '*', '😋'].forEach(function (val) {
+	['a b', '{', '}', '_', '-', '$', '*', '😋'].forEach(val => {
 		t.is(isAlphanumeric(val), false);
 	});
 
 	t.end();
 });
 
-test('should throw when not passing a string', function (t) {
-	t.throws(function () {
+test('should throw when not passing a string', t => {
+	t.throws(() => {
 		isAlphanumeric(5);
 	});
 
