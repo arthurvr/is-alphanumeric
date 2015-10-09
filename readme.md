@@ -13,7 +13,7 @@ $ npm install --save is-alphanumeric
 ## Usage
 
 ```js
-var isAlphanumeric = require('is-alphanumeric');
+const isAlphanumeric = require('is-alphanumeric');
 
 isAlphanumeric('unicorns');
 //=> true
